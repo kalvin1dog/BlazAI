@@ -1,5 +1,7 @@
 # RazaTech
-<strong>All Visual Studio code for this Business App</strong>
+<strong>Blazor WebAssembly Builder</strong>
+<br>
+Automatic Code Generator for Visual Studio
 <br>
 Just unzip the zipped files and Open them in Visual Studio 2022.
 <br><br>
