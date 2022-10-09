@@ -2,7 +2,7 @@
 <strong>Blazor WebAssembly Builder</strong>
 <br>
 Automatic Code Generator for Visual Studio
-<br>
+<br><br>
 Just unzip the zipped files and Open them in Visual Studio 2022.
 <br><br>
 <strong>YouTube videos:-</strong>
