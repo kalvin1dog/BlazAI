@@ -7,7 +7,7 @@ Just unzip the zipped files.
 <br>
 Go to MAUIWASM folder.
 <br>
-<br> and go to KalWasm folder and Open KalDogWasm6 solution in Visual Studio 2022.
+and go to KalWasm folder and Open KalDogWasm6 solution in Visual Studio 2022.
 <br><br>
 <strong>YouTube videos:-</strong>
 <br>
