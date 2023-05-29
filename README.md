@@ -4,8 +4,8 @@
 Automatic Code Generator for Visual Studio
 <br><br>
 Just unzip the zipped files.
-<br>
-Go to MAUIWASM folder.
+<br><br>
+Go to <strong>MAUIWASM</strong> folder.
 <br>
 and go to KalWasm folder and Open KalDogWasm6 solution in Visual Studio 2022.
 <br><br>
