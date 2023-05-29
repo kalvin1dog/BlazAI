@@ -3,7 +3,8 @@
 <br>
 Automatic Code Generator for Visual Studio
 <br><br>
-Just unzip the zipped files and Open them in Visual Studio 2022.
+Just unzip the zipped files.
+<br> Open KalWasm folder and Open KalDogWasm6 solution in Visual Studio 2022.
 <br><br>
 <strong>YouTube videos:-</strong>
 <br>
