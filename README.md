@@ -1,4 +1,4 @@
-# RazaTech
+# BlazAI
 <strong>Blazor WebAssembly and MAUI App Builder</strong>
 <br>
 Automatic Code Generator for Visual Studio
