@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Company Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            height: 100vh;
+            padding: 80px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        .registration-form {
+            max-width: 500px;
+            margin: auto;
+        }
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                background: #fff;
+                padding: 10px;
+            }
+            .section {
+                height: 100vh;
+                scroll-margin-top: 56px;
+            }
+        }
+        @media (min-width: 769px) {
+            .section {
+                height: 100vh;
+                scroll-margin-top: 70px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Header with Navbar -->
+<header id="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#section1">Engineering Co.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#section1">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#section2">Service 1</a></li>
+                            <li><a class="dropdown-item" href="#section3">Service 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#section4">Contact</a></li>
+                </ul>
+                <form class="d-flex" id="searchForm">
+                    <input class="form-control me-2" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Sections -->
+<section id="section1" class="section bg-light">
+    <div>
+        <h1>Welcome to Engineering Co.</h1>
+        <p>Delivering innovative engineering solutions with excellence and precision.</p>
+    </div>
+</section>
+<section id="section2" class="section bg-secondary text-white">
+    <div>
+        <h1>Service 1</h1>
+        <p>We offer specialized solutions tailored to your business needs.</p>
+    </div>
+</section>
+<section id="section3" class="section bg-success text-white">
+    <div>
+        <h1>Service 2</h1>
+        <p>Committed to engineering excellence in every project.</p>
+<p>Delivering innovative engineering solutions with excellence and precision.</p>
+<p>Delivering innovative engineering solutions with excellence and precision.</p>
+<p>Delivering innovative engineering solutions with excellence and precision.</p>
+<p>Delivering innovative engineering solutions with excellence and precision.</p>
+<p>Delivering innovative engineering solutions with excellence and precision.</p>
+    </div>
+</section>
+<section id="section4" class="section bg-info text-white">
+    <div>
+        <h1>Contact Us</h1>
+        <p>Get in touch to discuss your next engineering project.</p>
+        <div class="registration-form">
+            <h3>Register with Us</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Engineering Co. All Rights Reserved.</p>
+</footer>
+
+<!-- Smooth Scrolling and Search Script -->
+<script>
+    $(document).ready(function(){
+        // Smooth scrolling for menu links
+        $('a.nav-link, a.dropdown-item, a.navbar-brand').on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                const hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 250, 'linear');
+
+                //$('html, body').animate({
+                   // scrollTop: $(hash).offset().top
+                //}, 500, 'swing');
+
+                //$('.navbar-collapse').collapse('hide');
+
+                //$('html, body').animate({
+                  //  scrollTop: $(hash).offset().top
+                //}, '100');
+                $('.highlight').each(function() {
+                   $(this).replaceWith($(this).text());
+                });
+                $('#searchInput').val('');
+            }
+        });
+
+        // Search functionality with section focus
+        $('#searchForm').on('submit', function(e) {
+            e.preventDefault();
+            const query = $('#searchInput').val().toLowerCase();
+            if (query.trim() === '') return;
+            $('.highlight').each(function() {
+                $(this).replaceWith($(this).text());
+            });
+            let found = false;
+            $('body').find('*').each(function() {
+                if ($(this).children().length === 0 && $(this).text().toLowerCase().includes(query)) {
+                    const regex = new RegExp(`(${query})`, 'gi');
+                    $(this).html($(this).text().replace(regex, '<span class="highlight">$1</span>'));
+                    if (!found) {
+                        const section = $(this).closest('section');
+                        if (section.length) {
+                            $('html, body').animate({scrollTop: section.offset().top}, 300, 'linear');
+                        }
+                        found = true;
+                    }
+                }
+            });
+            if (!found) {
+                alert('No results found for: ' + query);
+            }
+        });
+    });
+</script>
+</body>
+</html>
