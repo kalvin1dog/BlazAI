@@ -557,7 +557,7 @@ imgxxxx:hover {
     $(document).ready(function(){
 
         $('#carouselExampleIndicators').carousel({
-         interval: 1000, // Change slide every 1 seconds
+         interval: 3000, // Change slide every 3 seconds
          pause: 'hover'
         });
 
@@ -573,9 +573,10 @@ imgxxxx:hover {
         //const target = $(this).attr('href');
         const target = $(this.hash); // Select target section directly
         //const target = $(this).attr('href');
+
         $('html, body').animate({
           scrollTop: $(target).offset().top - $('.navbar').outerHeight()
-        }, 220);
+        }, 520);
 
                 //$('html, body').animate({
                    // scrollTop: $(hash).offset().top
