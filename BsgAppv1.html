@@ -14,6 +14,7 @@
         body {
             font-family: Arial, sans-serif;
         }
+
         .section {
             height: 100vh;
             padding: 80px 60px;
@@ -52,9 +53,11 @@
         }
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 5px;
             background: #f8f9fa;
         }
+
+
         .highlight {
             background-color: yellow;
         }
@@ -156,6 +159,7 @@ imgxxxx:hover {
     </style>
 </head>
 <body>
+
 
 <!-- Header with Navbar -->
 <header id="header">
@@ -517,35 +521,34 @@ imgxxxx:hover {
 
 
 
+<section id="section4" class="bg-light" style="border:2px groove green;">
+
+<table border="1" style="width:100%;height: 100vh;">
+ <tr>
+   <td align="center" valign="top">
+
+       <div style="font-weight:bold;font-size:32px;color:black;padding-top:45px;">Contact Us</div>
 
 
-<section id="section4" class="section bg-light text-black" style="border:2px groove green;">
-    <div>
-        
-        <div style="font-weight:bold;font-size:34px;color:black;">Contact Us</div>
-        <p style="font-size:16px;">Get in touch to discuss your next engineering project.</p>
-        
-        <div class="registration-form">
-           
-            <div style="font-weight:normal;font-size:24px;color:black;padding-bottom:8px;">Register with Us</div>
-            <form>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </div>
+       <div style="height:29px;">
+                &nbsp;
+       </div>
+       <div><strong>Phone:</strong> +61 428 181 898</div>
+
+       <div style="height:8px;">
+                &nbsp;
+       </div>
+       <div><strong>Email:</strong> info@blackseagroup.com.au</div>
+
+
+   </td>
+ </tr>
+</table>
+
+
 </section>
+
+
 
 <!-- Footer -->
 <footer>
@@ -554,7 +557,14 @@ imgxxxx:hover {
 
 <!-- Smooth Scrolling and Search Script -->
 <script>
+
     $(document).ready(function(){
+
+        //setTimeout(CollFunc, 500);  //1/2 second
+        SectionHide();
+        var sect = document.getElementById("section1");
+        sect.style.display = "block";
+
 
         $('#carouselExampleIndicators').carousel({
          interval: 3000, // Change slide every 3 seconds
@@ -570,43 +580,37 @@ imgxxxx:hover {
                    // scrollTop: $(hash).offset().top
                 //}, 50, 'linear');
 
-        //const target = $(this).attr('href');
-        const target = $(this.hash); // Select target section directly
-        //const target = $(this).attr('href');
-
-        $('html, body').animate({
-          scrollTop: $(target).offset().top - $('.navbar').outerHeight()
-        }, 520);
-
-                //$('html, body').animate({
-                   // scrollTop: $(hash).offset().top
-                //}, 500, 'swing');
-
-                //$('.navbar-collapse').collapse('hide');
-
-                //$('html, body').animate({
-                  //  scrollTop: $(hash).offset().top
-                //}, '100');
-
-                $('.highlight').each(function() {
-                   $(this).replaceWith($(this).text());
-                });
-                $('#searchInput').val('');
+            //const target = $(this).attr('href');
+            const target = $(this.hash); // Select target section directly
+            const targetk = $(this).attr('href').substring(1);
+            //alert('targetk: ' + targetk);
+            //alert('hash: ' + hash);
 
 
-                // Collapse the mobile menu after clicking a link
-                //if ($('.navbar-toggler').is(':visible')) {
-                 // $('.navbar-toggler').click();
-                //}
-        // Collapse navbar on mobile after clicking any link or brand
-        if ($('.navbar-toggler').is(':visible')) {
-          $('.navbar-collapse').collapse('hide');
-        }
+             SectionHide();
+             sect = document.getElementById(targetk);
+             sect.style.display = "block";
 
-                //setTimeout(CollFunc, 400);  //1/2 second
+             $('html, body').animate({
+              scrollTop: $(target).offset().top - $('.navbar').outerHeight()
+             }, 520);
 
-            }
+             $('.highlight').each(function() {
+                 $(this).replaceWith($(this).text());
+             });
+             $('#searchInput').val('');
+
+
+             // Collapse navbar on mobile after clicking any link or brand
+             if ($('.navbar-toggler').is(':visible')) {
+              $('.navbar-collapse').collapse('hide');
+             }
+
+
+           }
         });
+
+
 
         // Search functionality with section focus
         $('#searchForm').on('submit', function(e) {
@@ -622,16 +626,28 @@ imgxxxx:hover {
                     const regex = new RegExp(`(${query})`, 'gi');
                     $(this).html($(this).text().replace(regex, '<span class="highlight">$1</span>'));
                     if (!found) {
-                        const section = $(this).closest('section');   //????
+                        const section = $(this).closest('section'); 
                         //alert('found text: ' + section.length);
-                        //alert('found section: ' + section);
+
+                        //alert('found text: ' + section.length);
+                        //alert('found section: ' + sectfind);
+
                         if (section.length) {
+                            var sectfind = $(this).closest('section').attr('id');
+
+                            SectionHide();
+                            var sectshow = document.getElementById(sectfind);
+                            sectshow.style.display = "block";
+
                             $('html, body').animate({scrollTop: section.offset().top - $('.navbar').outerHeight()}, 50, 'linear');
                         }
-                        //const divv = $(this).closest('div');
-                        //if (divv.length) {
-                            //$('html, body').animate({scrollTop: divv.offset().top}, 50, 'linear');
-                        //}
+
+                        if (section.length == 0) {
+                          SectionHide();
+                          var sectnotfind = document.getElementById("section1");
+                          sectnotfind.style.display = "block";
+                        }
+
 
                         found = true;
 
@@ -647,12 +663,65 @@ imgxxxx:hover {
                 alert('No results found for: ' + query);
             }
         });
+
     });
 
+
+
+    function SectionHide() {
+
+       var sect = document.getElementById("section1");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section2");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section3");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section4");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section5");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section6");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section7");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section8");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section9");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section10");
+       sect.style.display = "none";
+
+
+    }
+
+
+
     function CollFunc() {
+
+  var x = document.getElementById("section5");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+
        $('.navbar-collapse').collapse('hide');
+
       //alert("Hello!");
     }
+
+
+
 
 
 </script>
