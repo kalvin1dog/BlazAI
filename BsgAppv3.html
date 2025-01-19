@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Sea Group</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            height: 100vh;
+            padding: 80px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brandold {
+            font-weight: bold;
+        }
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+        .navbar-brand-text {
+            display: inline-block;
+            margin-left: 1px;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 5px;
+            background: #f8f9fa;
+        }
+
+
+        .highlight {
+            background-color: yellow;
+        }
+        .registration-form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+.carousel-container {
+    width: 600px;
+    margin: 0 auto; /* Center the carousel horizontally */
+}
+
+.carousel-item img {
+    height: 300px; /* Adjust the height as needed */
+    object-fit: cover;
+}
+
+        .carousel-caption {
+         background: rgba(0, 0, 0, 0.5);
+         padding: 10px;
+         border-radius: 5px;
+        }
+
+/* Next & Previous Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%; /* Make buttons wider */
+    opacity: 0.9; /* Make buttons more visible */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 1.5); /* Add background for visibility */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Caption Styling */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.42); /* Dark background for better readability */
+    padding: 8px;
+    font-size: 12px; /* Smaller font size */
+    text-align: center;
+    word-wrap: break-word;
+    bottom: 10px;
+}
+
+imgxx:hover {
+  transform: scale(1.1); /* Increase size by 10% */
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  opacity: 0.7; /* Adjust opacity as desired */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+imgxxx:hover {
+  filter: grayscale(1); /* Convert to grayscale */
+  transition: filter 0.3s ease;
+}
+
+imgffx:hover {
+  transform: rotate(4deg); /* Rotate 5 degrees */
+  transition: transform 0.3s ease;
+}
+
+imgxxxx:hover {
+  filter: blur(3px); /* Apply a 3px blur */
+  transition: filter 0.3s ease;
+}
+
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 400px) {
+    .carousel-container {
+        width: 90%;
+    }
+
+    .carousel-caption {
+        font-size: 10px; /* Further reduce font size for small screens */
+        padding: 5px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 20%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        padding: 8px;
+    }
+
+}
+
+.fullscreen-image {
+      background-image: url('architect.jpg'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      opacity: 0.85; /* 80% opacity */
+    }
+
+
+    </style>
+</head>
+<body>
+
+
+<!-- Header with Navbar -->
+<header id="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="#section1">
+                <img src="BSGLogo1.jpg" alt="BSG Logo">
+                <span class="navbar-brand-text">Black Sea Group</span>
+            </a>
+
+            <div style="position:absolute;top:21px;left:181px;display:none;">
+             <a href="https://www.facebook.com/blacksea.au" target="_blank" title="facebook">
+               <i class="bi bi-facebook" style="font-size:16px;"></i>
+             </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#section1">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#section5">Our Story</a></li>
+                            <li><a class="dropdown-item" href="#section6">Meet the Team</a></li>
+                            <li><a class="dropdown-item" href="#section7">Partners &amp; Membership</a></li>
+                            <li><a class="dropdown-item" href="#section8">HSEA</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#section2">Residential Construction</a></li>
+                            <li><a class="dropdown-item" href="#section3">Industrial &amp; Commercial Construction</a></li>
+                            <li><a class="dropdown-item" href="#section9">Maintenance</a></li>
+                            <li><a class="dropdown-item" href="#section10">Engineering</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#section4">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div style="padding-right:5px;">
+                 <a href="https://www.facebook.com/blacksea.au" target="_blank" title="facebook">
+                  <i class="bi bi-facebook" style="font-size:22px;"></i>
+                 </a>
+                </div>
+                <form class="d-flex" id="searchForm">
+                    <input class="form-control me-2" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+
+<!-- Sections -->
+
+<section id="section1" class="bg-light fullscreen-image" style="border:2px groove green;">
+
+<table border="1" style="width:100%;height: 100vh;">
+ <tr>
+   <td align="center" valign="top">
+     
+        <div style="font-weight:bold;font-size:32px;color:navy;padding-top:40px;padding-bottom:15px;display:none;">Welcome to Black Sea Group</div>
+
+        <p style="text-align: left;padding-left:1px;padding-right:1px;padding-top:25px;max-width: 500px;margin: auto;display:none;">
+          Delivering innovative engineering solutions with excellence and precision.
+        </p>
+
+ <div class="container">
+
+        <div style="height:52px;">
+                &nbsp;
+        </div>
+
+        <h1>Welcome to Black Sea Group</h1>
+        <p>Delivering innovative engineering solutions with excellence and precision.</p>
+
+        <div style="height:72px;">
+                &nbsp;
+        </div>
+
+        <!-- Carousel Container Start -->
+        <div class="carousel-container" style="border: 2px solid black;margin: 10px;padding: 10px;">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image1656x369.jpg" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Innovative Solutions</h5>
+                            <p>We bring creativity to engineering challenges.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image2656x437.jpg" class="d-block w-100" alt="Slide 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Advanced Technology</h5>
+                            <p>Utilizing state-of-the-art technology.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image3656x437.jpg" class="d-block w-100" alt="Slide 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Reliable Engineering</h5>
+                            <p>Ensuring the highest standards of reliability.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!-- Carousel Container End -->
+    </div>
+
+
+       <div style="height:19px;">
+                &nbsp;
+       </div>
+
+   </td>
+ </tr>
+</table>
+
+
+</section>
+
+
+
+<section id="section5" class="bg-light" style="border:2px groove green;">
+
+<table border="1" style="width:100%;height: 100vh;">
+ <tr>
+   <td align="center" valign="top">
+
+       <div style="font-weight:bold;font-size:29px;color:black;padding-top:45px;font-family: 'Abel', serif;">Our Story</div>
+
+       <p style="text-align: left;padding-left:10px;padding-right:10px;padding-top:25px;max-width: 500px;margin: auto;font-size:17px;font-weightn:550;color:navy;">
+
+        Established in 2001, we are a family-owned construction & engineering company 
+        with a steadfast commitment to excellence. Our journey in the construction 
+        industry spans over two decades, where we've cultivated a deep-rooted dedication 
+        to quality craftsmanship and customer satisfaction.
+
+       </p>
+
+
+       <div style="height:149px;">
+                &nbsp;
+       </div>
+
+   </td>
+ </tr>
+</table>
+
+
+</section>
+
+
+<section id="section6" class="bg-light" style="border:2px groove green;">
+
+<table border="1" style="width:100%;height: 100vh;">
+ <tr>
+   <td align="center" valign="top">
+
+       <div style="font-weight:bold;font-size:32px;color:black;padding-top:45px;font-family: 'Abel', serif;">Meet the Team</div>
+
+       <div style="height:29px;">
+                &nbsp;
+       </div>
+
+   <div class="table-responsive">
+            <table border="1" class="table table-borderless text-center align-middle">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="bg-light">
+                                
+                                <img src="UgurAzak2.jpg" class="img-fluid" alt="Your Image">
+                               
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bg-light">
+                              
+                                <img src="ZaferAzak2.jpg" class="img-fluid" alt="Your Image">
+                                
+                            </div>
+                        </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+
+   </td>
+ </tr>
+</table>
+
+
+</section>
+
+
+<section id="section7" class="bg-light" style="border:2px groove green;">
+
+<table border="1" style="width:100%;height: 100vh;">
+ <tr>
+   <td align="center" valign="top">
+
+       <div style="font-weight:bold;font-size:32px;color:black;padding-top:45px;font-family: 'Abel', serif;">Partners &amp; Membership</div>
+
+       <p style="text-align: left;padding-left:1px;padding-right:1px;padding-top:25px;max-width: 500px;margin: auto;">
+         Delivering innovative engineering solutions with excellence and precision.
+       </p>
+
+     
+
+       <div style="height:19px;">
+                &nbsp;
+       </div>
+
+   </td>
+ </tr>
+</table>
+
+
+</section>
+
+
+<section id="section8" class="bg-light" style="border:2px groove green;">
+
+<table border="1" style="width:100%;height: 100vh;">
+ <tr>
+   <td align="center" valign="top">
+
+       <div style="font-weight:bold;font-size:32px;color:black;padding-top:45px;font-family: 'Abel', serif;">HSEA</div>
+
+       <p style="text-align: left;padding-left:1px;padding-right:1px;padding-top:25px;max-width: 500px;margin: auto;">
+         Delivering innovative engineering solutions with excellence and precision.
+       </p>
+
+
+       <div style="height:19px;">
+                &nbsp;
+       </div>
+
+   </td>
+ </tr>
+</table>
+
+
+</section>
+
+
+
+<section id="section2" class="bg-light" style="border:2px groove green;">
+
+<table border="1" style="width:100%;height: 100vh;">
+ <tr>
+   <td align="center" valign="top">
+
+       <div style="font-weight:bold;font-size:32px;color:black;padding-top:45px;font-family: 'Abel', serif;">Residential Construction</div>
+
+       <p style="text-align: left;padding-left:1px;padding-right:1px;padding-top:25px;max-width: 500px;margin: auto;">
+         Delivering innovative engineering solutions with excellence and precision.
+       </p>
+
+
+       <div style="height:19px;">
+                &nbsp;
+       </div>
+
+   </td>
+ </tr>
+</table>
+
+
+</section>
+
+
+
+<section id="section3" class="bg-light" style="border:2px groove green;">
+
+<table border="1" style="width:100%;height: 100vh;">
+ <tr>
+   <td align="center" valign="top">
+
+       <div style="font-weight:bold;font-size:32px;color:black;padding-top:45px;font-family: 'Abel', serif;">Industrial &amp; Commercial Construction</div>
+
+       <p style="text-align: left;padding-left:1px;padding-right:1px;padding-top:25px;max-width: 500px;margin: auto;">
+         Delivering innovative engineering solutions with excellence and precision.
+       </p>
+
+
+       <div style="height:19px;">
+                &nbsp;
+       </div>
+
+   </td>
+ </tr>
+</table>
+
+
+</section>
+
+
+
+<section id="section9" class="bg-light" style="border:2px groove green;">
+
+<table border="1" style="width:100%;height: 100vh;">
+ <tr>
+   <td align="center" valign="top">
+
+       <div style="font-weight:bold;font-size:32px;color:black;padding-top:45px;font-family: 'Abel', serif;">Maintenance</div>
+
+       <p style="text-align: left;padding-left:1px;padding-right:1px;padding-top:25px;max-width: 500px;margin: auto;">
+         Delivering innovative engineering solutions with excellence and precision.
+       </p>
+
+
+       <div style="height:19px;">
+                &nbsp;
+       </div>
+
+   </td>
+ </tr>
+</table>
+
+
+</section>
+
+
+
+
+<section id="section10" class="bg-light" style="border:2px groove green;">
+
+<table border="1" style="width:100%;height: 100vh;">
+ <tr>
+   <td align="center" valign="top">
+
+       <div style="font-weight:bold;font-size:32px;color:black;padding-top:45px;font-family: 'Abel', serif;">Engineering</div>
+
+       <p style="text-align: left;padding-left:1px;padding-right:1px;padding-top:25px;max-width: 500px;margin: auto;">
+         Delivering innovative engineering solutions with excellence and precision.
+       </p>
+
+
+       <div style="height:19px;">
+                &nbsp;
+       </div>
+
+   </td>
+ </tr>
+</table>
+
+
+</section>
+
+
+
+<section id="section4" class="bg-light fullscreen-image" style="border:2px groove green;">
+
+<table border="1" style="width:100%;height: 100vh;">
+ <tr>
+   <td align="center" valign="top">
+
+       <div style="font-weight:bold;font-size:34px;color:black;padding-top:45px;font-family: 'Abel', serif;">Contact Us</div>
+
+
+       <div style="height:29px;">
+                &nbsp;
+       </div>
+       <div><strong>Phone:</strong> +61 428 181 898</div>
+
+       <div style="height:8px;">
+                &nbsp;
+       </div>
+       <div><strong>Email:</strong> info@blackseagroup.com.au</div>
+
+       <div style="padding-right:5px;display:inline-block;">
+                 <a href="https://www.facebook.com/blacksea.au" target="_blank" title="facebook">
+                  <i class="bi bi-facebook" style="font-size:28px;"></i>
+                 </a>
+       </div>
+
+       <div style="padding-right:15px;display:inline-block;">
+                 <a href="https://www.linkedin.com/company/black-sea-group-au/" target="_blank" title="linkedin">
+                  <i class="bi bi-linkedin" style="font-size:28px;"></i>
+                 </a>
+       </div>
+
+   </td>
+ </tr>
+</table>
+
+
+</section>
+
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Black Sea Group. All Rights Reserved.</p>
+</footer>
+
+<!-- Smooth Scrolling and Search Script -->
+<script>
+
+    $(document).ready(function(){
+
+        //setTimeout(CollFunc, 500);  //1/2 second
+        SectionHide();
+        var sect = document.getElementById("section1");
+        sect.style.display = "block";
+
+
+        $('#carouselExampleIndicators').carousel({
+         interval: 3000, // Change slide every 3 seconds
+         pause: 'hover'
+        });
+
+        // Smooth scrolling for menu links
+        $('a.nav-link, a.dropdown-item, .navbar-brand').on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                //const hash = this.hash;
+                //$('html, body').animate({
+                   // scrollTop: $(hash).offset().top
+                //}, 50, 'linear');
+
+            //const target = $(this).attr('href');
+            const target = $(this.hash); // Select target section directly
+            const targetk = $(this).attr('href').substring(1);
+            //alert('targetk: ' + targetk);
+            //alert('hash: ' + hash);
+
+
+             SectionHide();
+             sect = document.getElementById(targetk);
+             sect.style.display = "block";
+
+             $('html, body').animate({
+              scrollTop: $(target).offset().top - $('.navbar').outerHeight()
+             }, 520);
+
+             $('.highlight').each(function() {
+                 $(this).replaceWith($(this).text());
+             });
+             $('#searchInput').val('');
+
+
+             // Collapse navbar on mobile after clicking any link or brand
+             if ($('.navbar-toggler').is(':visible')) {
+              $('.navbar-collapse').collapse('hide');
+             }
+
+
+           }
+        });
+
+
+
+        // Search functionality with section focus
+        $('#searchForm').on('submit', function(e) {
+            e.preventDefault();
+            const query = $('#searchInput').val().toLowerCase();
+            if (query.trim() === '') return;
+            $('.highlight').each(function() {
+                $(this).replaceWith($(this).text());
+            });
+            let found = false;
+            $('body').find('*').each(function() {
+                if ($(this).children().length === 0 && $(this).text().toLowerCase().includes(query)) {
+                    const regex = new RegExp(`(${query})`, 'gi');
+                    $(this).html($(this).text().replace(regex, '<span class="highlight">$1</span>'));
+                    if (!found) {
+                        const section = $(this).closest('section'); 
+                        //alert('found text: ' + section.length);
+
+                        //alert('found text: ' + section.length);
+                        //alert('found section: ' + sectfind);
+
+                        if (section.length) {
+                            var sectfind = $(this).closest('section').attr('id');
+
+                            SectionHide();
+                            var sectshow = document.getElementById(sectfind);
+                            sectshow.style.display = "block";
+
+                            $('html, body').animate({scrollTop: section.offset().top - $('.navbar').outerHeight()}, 50, 'linear');
+                        }
+
+                        if (section.length == 0) {
+                          SectionHide();
+                          var sectnotfind = document.getElementById("section1");
+                          sectnotfind.style.display = "block";
+                        }
+
+
+                        found = true;
+
+                        // Collapse navbar on mobile after clicking any link or brand
+                        if ($('.navbar-toggler').is(':visible')) {
+                          $('.navbar-collapse').collapse('hide');
+                        }
+
+                    }
+                }
+            });
+            if (!found) {
+                alert('No results found for: ' + query);
+            }
+        });
+
+    });
+
+
+
+    function SectionHide() {
+
+       var sect = document.getElementById("section1");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section2");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section3");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section4");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section5");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section6");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section7");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section8");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section9");
+       sect.style.display = "none";
+
+       sect = document.getElementById("section10");
+       sect.style.display = "none";
+
+
+    }
+
+
+
+    function CollFunc() {
+
+  var x = document.getElementById("section5");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+
+       $('.navbar-collapse').collapse('hide');
+
+      //alert("Hello!");
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
