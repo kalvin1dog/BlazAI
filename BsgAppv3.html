@@ -254,9 +254,22 @@ imgxxxx:hover {
  <div class="container">
 
        
-        <div style="font-weight:bold;font-size:42px;color:black;padding-top:30px;font-family: 'Abel', serif;">Welcome to</div>
 
+<!-- Visible only on mobile (smaller than md) -->
+<div class="d-block d-md-none">
+
+        <div style="font-weight:bold;font-size:30px;color:black;padding-top:30px;font-family: 'Abel', serif;">Welcome to</div>
+        <div style="font-weight:bold;font-size:30px;color:black;margin-top:-10px;font-family: 'Abel', serif;">Black Sea Group</div>
+
+</div>
+
+<!-- Visible only on PC (md and larger) -->
+<div class="d-none d-md-block">
+
+        <div style="font-weight:bold;font-size:42px;color:black;padding-top:30px;font-family: 'Abel', serif;">Welcome to</div>
         <div style="font-weight:bold;font-size:42px;color:black;margin-top:-10px;font-family: 'Abel', serif;">Black Sea Group</div>
+
+</div>
 
 
         <p>Delivering innovative engineering solutions with excellence and precision.</p>
